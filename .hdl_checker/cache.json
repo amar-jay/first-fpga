@@ -746,6 +746,25 @@
    },
    {
     "owner": {
+     "name": "/home/manan/code/first-fpga/_4x1_mux.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "_4x1_mux",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
      "name": "/home/manan/code/first-fpga/full_adder.v",
      "__class__": "Path"
     },
@@ -778,6 +797,25 @@
      [
       0,
       6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/manan/code/first-fpga/4x1_mux.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "_4x1_mux",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
      ]
     ],
     "__class__": "VerilogDesignUnit"
