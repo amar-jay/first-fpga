@@ -1,0 +1,789 @@
+{
+ "builder": {
+  "_version": "<undefined>",
+  "_logger": "hdl_checker.builders.fallback",
+  "_work_folder": "/home/manan/code/first-fpga/.hdl_checker",
+  "_builtin_libraries": [],
+  "_added_libraries": [
+   {
+    "name": "not_in_project",
+    "case_sensitive": true,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "default_library",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   }
+  ],
+  "__class__": "Fallback"
+ },
+ "config_file": [
+  {
+   "name": "/tmp/hdl_checker_project_pid368073.json",
+   "__class__": "Path"
+  },
+  1730319932.5997372,
+  "generated"
+ ],
+ "database": {
+  "sources": [
+   {
+    "path": {
+     "name": "/home/manan/code/first-fpga/full_adder.v",
+     "__class__": "Path"
+    },
+    "mtime": 1730322972.87383,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "/home/manan/code/first-fpga/counter.v",
+     "__class__": "Path"
+    },
+    "mtime": 1730316228.0556052,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "/home/manan/code/first-fpga/half_adder.v",
+     "__class__": "Path"
+    },
+    "mtime": 1730322880.0829337,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   }
+  ],
+  "inferred_libraries": [
+   {
+    "name": "/tmp/tmp6zz3ieh9.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpo815kgma.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmprdj_yyy_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmppws0w08e.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp52g9l3zg.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpq7lffv8g.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmprtlxr8hs.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpxlt3iu5o.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpd7rfga6y.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpwvg3q1i2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpziucumrr.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpkgxch7dc.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpa09arcc2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpq4mqkelh.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpqxoft4h5.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp97yhl8nr.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpbizw447b.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpfmmuzxjh.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp9suv0tge.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpcl29uiwd.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp4hho7bcn.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpxiqv5skf.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpebyecmu_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpm1xhzhzg.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp08vj4g1v.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpxn_6pt8f.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpnhe7rs24.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp5rerdaey.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpqe3ir62t.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpytrzonw1.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp32aql484.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp69y3a5hf.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpxubqbii5.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmput1r6lqo.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp5tus9ux6.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp5kpxdh86.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpgy104jo8.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpbj2h_go0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpm3dp14pw.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp07ly2vd7.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpzlnbah2g.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpl8kjx983.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpp_n190r6.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpate9ink2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpqgbgegjg.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpcpf1061_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpabkatsea.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp5linyp0y.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpk6k2xea2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpeg9na2sv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpkaeou97s.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp4cq6_t7x.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpzl9_a4r_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp2scmddg8.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpav2cy9gj.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp8tdmz983.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpxfj1u8jv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpowyoirrf.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpbbbm0pll.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpwlri68v5.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpyu_ft7zo.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpoiqa7kub.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmph3mqy_ye.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpo735n47y.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmps5h5c90_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpu1lwyvr_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp2ql4ealc.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpi9xqr7tg.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp1o0kgktz.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpje8qfle0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmptbewg4fd.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpf3p1wn39.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpt9pg8mv0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/home/manan/code/first-fpga/half_adder.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp_h2206xo.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp7gfllzok.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp3q39k2pq.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpcz80k6_a.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpcamhbmjy.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp_i8x3zy0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp3cqf7i14.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp3p_37ato.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpot8bie83.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpqbo7ao1_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpiw4v1i_f.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpihrqlaqd.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpyfk2i_h0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp87gz4gkh.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp5zhg24v9.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpqbbbbr5c.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpd3cizizj.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp8bp6x3x5.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmps56t2_cb.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpfh2m4g91.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp_emdawxy.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpjzawuusa.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpdgia4n9w.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpx2v_dnwm.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmppgwm6q8u.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpe307canf.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpv5utjjw3.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmprhvz0vw2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpupeeq9q5.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp690kgk7w.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp0aue3_wy.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpfl8g7cmz.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpohkvo0je.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpjafbn4fc.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpo3cg6f1x.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp2wf_anbk.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpvn0ybn2u.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp86aifjk_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpmjwn89kb.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmppqshwo5c.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpochchh3_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpgiuwg_zp.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpc5qvng6e.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpobn2xd1p.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpqbeeyusj.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpbmpswief.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpsu7xvgmn.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpdlcof76l.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp1klvl9o9.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpfkzem33c.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp7hy7n347.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp3aromqzo.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpiyrmv6pg.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpk9jqa_e3.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp6iuuo0hj.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp9oguq6dy.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpa300vlhh.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpf5im1e_8.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmptifnuabv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp2m3vlwei.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp9efunw33.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpf9abnfpo.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmps9wuspcu.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmps8gx8w6a.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp6pryai0q.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpncj6ryb7.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/home/manan/code/first-fpga/full_adder.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/home/manan/code/first-fpga/counter.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpy_d9b113.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpv7929m5n.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp4hxnz0d_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpmxl2k6lv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpd31ucje_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmput8g3ic1.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpnot3wmpv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp8iqv41d0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpz_42s5bt.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpaa14wvrm.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpt2dvsajl.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp3u1giz6m.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpp2yxcncd.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpalme549j.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpmd91xgi4.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmprie0wloe.v",
+    "__class__": "Path"
+   }
+  ],
+  "design_units": [
+   {
+    "owner": {
+     "name": "/home/manan/code/first-fpga/counter.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "counter",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/manan/code/first-fpga/full_adder_from_half.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "full_adder_from_half",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/manan/code/first-fpga/full_adder.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "full_adder",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/manan/code/first-fpga/half_adder.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "half_adder",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   }
+  ],
+  "__class__": "Database"
+ },
+ "__version__": "0.7.4"
+}
