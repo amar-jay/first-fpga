@@ -1,13 +1,13 @@
-#include "verilated.h"
+#include <V_4x1_mux.h>
 #include <Vcounter.h>    // Generated module header from Verilator
 #include <Vfull_adder.h> // Generated module header from Verilator
 #include <Vhalf_adder.h> // Generated module header from Verilator
 #include <bitset>
 #include <iostream>
+#include <verilated.h>
 #include <verilated_vcd_c.h> // Verilator VCD header for waveform output
 
 #define WAVEFORM_PATH "waveform.vcd"
-
 
 int counter(VerilatedVcdC *tfp) {
   Vcounter *top = new Vcounter;
