@@ -9,24 +9,34 @@
 
 #define WAVEFORM_PATH "waveform.vcd"
 
-int counter(VerilatedVcdC *tfp) {
-  Vcounter *top = new Vcounter;
-  Verilated::traceEverOn(true);
-  top->trace(tfp, 99); // 99 is the trace depth
+int _4x1_mux(VerilatedVcdC *tfp) {
+  V_4x1_mux *top = new V_4x1_mux;
+
+  top->trace(tfp, 5); // Trace level
   tfp->open(WAVEFORM_PATH);
-  // Simulation loop
-  for (int i = 0; i < 254; i++) {
-    top->clk = 0;
-    top->eval();
-    tfp->dump(i * 2); // Dump at each clock edge
-    top->clk = 1;
-    top->eval();
-    tfp->dump(i * 2 + 1); // Dump at each clock edge
-    std::cout << "* Tik: ";
-    std::cout << std::bitset<8>(top->count) << "\t" << long(top->count)
+
+  unsigned char inputs = 0b0110;
+  unsigned char selectors[][2]{
+      {0b00, 0},
+      {0b01, 1},
+      {0b10, 1},
+      {0b11, 0},
+  };
+
+  // A, B, S, C
+  for (int i = 0; i < 4; i++) {
+    top->Inputs = inputs;
+    top->Selector = selectors[i][0];
+    top->eval(); // Evaluate with inputs
+    std::cout << "Actual Sum for "
+              << static_cast<unsigned char>(selectors[i][0]) << " : "
+              << int(selectors[i][1]) << "\tGot: " << int(top->Out)
               << std::endl;
+    tfp->dump(i);
   }
+  tfp->dump(4);
   tfp->close();
+
   delete top;
   return 0;
 }
@@ -110,6 +120,28 @@ int half_adder(VerilatedVcdC *tfp) {
   }
   tfp->close();
 
+  delete top;
+  return 0;
+}
+
+int counter(VerilatedVcdC *tfp) {
+  Vcounter *top = new Vcounter;
+  Verilated::traceEverOn(true);
+  top->trace(tfp, 99); // 99 is the trace depth
+  tfp->open(WAVEFORM_PATH);
+  // Simulation loop
+  for (int i = 0; i < 254; i++) {
+    top->clk = 0;
+    top->eval();
+    tfp->dump(i * 2); // Dump at each clock edge
+    top->clk = 1;
+    top->eval();
+    tfp->dump(i * 2 + 1); // Dump at each clock edge
+    std::cout << "* Tik: ";
+    std::cout << std::bitset<8>(top->count) << "\t" << long(top->count)
+              << std::endl;
+  }
+  tfp->close();
   delete top;
   return 0;
 }
