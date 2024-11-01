@@ -9,6 +9,84 @@
 
 #define WAVEFORM_PATH "waveform.vcd"
 
+void _2bit_comparator(VerilatedVcdC *tfp) {
+  V_2bit_comparator *top = new V_2bit_comparator;
+  top->trace(tfp, 5); // Trace level
+  tfp->open(WAVEFORM_PATH);
+
+  unsigned char inputs[]{
+      0b00,
+      0b01,
+      0b10,
+      0b11,
+  };
+  int len = sizeof(inputs) / sizeof(unsigned char);
+
+  for (size_t i = 0; i < len; i++) {
+    for (size_t j = 0; j < len; j++) {
+      top->A = i;
+      top->B = j;
+      top->eval();
+
+      if (top->Gt) {
+        std::cout << std::bitset<2>(top->A) << " " << std::bitset<2>(top->B)
+                  << " - A > B" << std::endl;
+      } else if (top->Eq) {
+        std::cout << std::bitset<2>(top->A) << " " << std::bitset<2>(top->B)
+                  << " - A == B" << std::endl;
+      } else if (top->Lt) {
+        std::cout << std::bitset<2>(top->A) << " " << std::bitset<2>(top->B)
+                  << " - A < B" << std::endl;
+      } else {
+        std::cout << "An error occured:  " << top->Gt << " " << top->Eq << " "
+                  << top->Lt << std::endl;
+      }
+
+      tfp->dump((i * len) + j);
+    }
+  }
+
+  tfp->dump(len * len);
+  tfp->close();
+  delete top;
+  return;
+}
+int _7_seg_display(VerilatedVcdC *tfp) {
+  V_7_seg_display *top = new V_7_seg_display;
+
+  top->trace(tfp, 5); // Trace level
+  tfp->open(WAVEFORM_PATH);
+
+  unsigned char inputs = 0b0110;
+  unsigned char selectors[][2]{
+      {0b00, 0},
+      {0b01, 1},
+      {0b10, 1},
+      {0b11, 0},
+  };
+
+  unsigned char truth_table[10]{
+      0b1111110, 0b0110000, 0b1101101, 0b1111001, 0b0110011,
+      0b1011011, 0b1011111, 0b1110000, 0b1111111, 0b1110011,
+  };
+
+  // A, B, S, C
+  for (int i = 0; i < 10; i++) {
+    top->Inputs = i;
+    top->eval(); // Evaluate with inputs
+    std::cout << "Actual of (" << i << " | " << std::bitset<4>(i)
+              << "): " << std::bitset<7>(truth_table[i])
+              << "\tGot: " << std::bitset<7>(top->Output)
+              << " \tCorrect: " << (truth_table[i] == top->Output) << std::endl;
+    tfp->dump(i);
+  }
+  tfp->dump(10);
+  tfp->close();
+
+  delete top;
+  return 0;
+}
+
 int _4x1_mux(VerilatedVcdC *tfp) {
   V_4x1_mux *top = new V_4x1_mux;
 
