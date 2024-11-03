@@ -1,4 +1,4 @@
-#include "Vcomparator.h"
+#include "V_3bit_adder.h"
 #include <bitset>
 #include <cstring>
 #include <iostream>
@@ -7,8 +7,8 @@
 #include <verilated_vcd_c.h> // Verilator VCD header for waveform output
 #define WAVEFORM_PATH "waveform.vcd"
 
-void _3bit_comparator(VerilatedVcdC *tfp) {
-  Vcomparator *top = new Vcomparator;
+void _3bit_adder(VerilatedVcdC *tfp) {
+  V_3bit_adder *top = new V_3bit_adder;
   top->trace(tfp, 5); // Trace level
   tfp->open(WAVEFORM_PATH);
 
@@ -19,30 +19,20 @@ void _3bit_comparator(VerilatedVcdC *tfp) {
 
   for (size_t i = 0; i < len; i++) {
     for (size_t j = 0; j < len; j++) {
-      top->A = i;
-      top->B = j;
+      top->A = inputs[i];
+      top->B = inputs[j];
       top->eval();
 
-      if (top->Gt) {
-        std::cout << std::bitset<3>(top->A) << " " << std::bitset<3>(top->B)
-                  << " - A > B" << " |\t";
-      } else if (top->Eq) {
-        std::cout << std::bitset<3>(top->A) << " " << std::bitset<3>(top->B)
-                  << " - A = B" << " |\t";
-      } else if (top->Lt) {
-        std::cout << std::bitset<3>(top->A) << " " << std::bitset<3>(top->B)
-                  << " - A < B" << " |\t";
-      } else {
-        std::cout << "An error occured:  " << top->Gt << " " << top->Eq << " "
-                  << top->Lt << std::endl;
-      }
+      std::cout << std::bitset<3>(top->A & 0xF) << " + "
+                << std::bitset<3>(top->B & 0xF) << " = "
+                << std::bitset<4>(top->Sum & 0xF) << " |\t";
 
       tfp->dump((i * len) + j);
     }
     std::cout << std::endl;
   }
 
-  tfp->dump(16);
+  tfp->dump(len * len);
   tfp->close();
   delete top;
   return;
@@ -52,5 +42,5 @@ int main(int argc, char **argv, char **env) {
   VerilatedVcdC *tfp = new VerilatedVcdC;
   Verilated::traceEverOn(true);
 
-  _3bit_comparator(tfp);
+  _3bit_adder(tfp);
 }
