@@ -22,29 +22,108 @@ module _2bit_comparator (
     output Lt  //A<B
 );
 
-  assign Gt = ~B[0] & (A[0] | A[1] ^ B[1]);
-  assign Eq = (A[0] ~^ B[0]) | (A[1] ~^ B[1]);
-  assign Lt = B[0] & (~A[0] | A[1] ^ B[1]);
+  function automatic equal;
+    input A, B;
+    begin
+      equal = ~(A ^ B);
+    end
+  endfunction
+
+  function automatic lt;
+    input A, B;
+    begin
+      lt = ~A & B;
+    end
+  endfunction
+
+  function automatic gt;
+    input A, B;
+    begin
+      gt = A & ~B;
+    end
+  endfunction
+
+  assign Gt = gt(A[1], B[1]) | equal(A[1], B[1]) & gt(A[0], B[0]);
+  assign Eq = equal(A[0], B[0]) | equal(A[0], B[0]);
+  assign Lt = lt(A[1], B[1]) | equal(A[1], B[1]) & lt(A[0], B[0]);
 
 endmodule
 
 
-module comparator (
+module _3bit_comparator (
     input [2:0] A,
     input [2:0] B,
     output Gt,  //A>B
-    output Eq,  //A==B
-    output Lt  //A<B
+    Eq,  //A==B
+    Lt  //A<B
 );
+  // Define the full adder function
+  function automatic equal;
+    input A, B;
+    begin
+      equal = ~(A ^ B);
+    end
+  endfunction
 
-  assign Gt = (~B[2] & ~B[1] & ~B[0] & A[0]) | (~B[2] & ~B[1] & A[1]) | (~B[2] & A[2]) |
-    (~B[2] & ~B[0] & A[1] & A[0]) | (~B[1] & ~B[0] & A[2] & A[0]) | (~B[1] & A[2] & A[1]) |
-    (~B[0] & A[2] & A[1] & A[0]);
+  function automatic lt;
+    input A, B;
+    begin
+      lt = ~A & B;
+    end
+  endfunction
 
-  assign Lt = (B[0] & ~A[2] & ~A[1] & ~A[0]) | (B[1] & ~A[2] & ~A[1]) |
-    (B[1] & B[0] & ~A[2] & ~A[0]) | (B[2] & ~A[2]) | (B[2] & B[0] & ~A[1] & ~A[0]) |
-    (B[2] & B[1] & ~A[1]) | (B[2] & B[1] & B[0] & ~A[0]);
+  function automatic gt;
+    input A, B;
+    begin
+      gt = A & ~B;
+    end
+  endfunction
 
-  assign Eq = (A[0] ^~ B[0]) & (A[1] ^~ B[1]) & (A[2] ^~ B[2]);
+
+  assign Eq = equal(A[0], B[0]) & equal(A[1], B[1]) & equal(A[2], B[2]);
+  assign Lt = lt(
+      A[2], B[2]
+  ) | equal(
+      A[2], B[2]
+  ) & lt(
+      A[1], B[1]
+  ) | equal(
+      A[2], B[2]
+  ) & equal(
+      A[1], B[1]
+  ) & lt(
+      A[0], B[0]
+  );
+  assign Gt = gt(
+      A[2], B[2]
+  ) | equal(
+      A[2], B[2]
+  ) & gt(
+      A[1], B[1]
+  ) | equal(
+      A[2], B[2]
+  ) & equal(
+      A[1], B[1]
+  ) & gt(
+      A[0], B[0]
+  );
+
 endmodule
 
+
+
+// a comparator can easily be done using the </>/= sign and leave verilog to
+// handle the rest
+module comparator (
+    input [2:0] A,
+    input [2:0] B,
+    output wire Gt,  //A>B
+    output wire Eq,  //A==B
+    output wire Lt  //A<B
+);
+
+  assign Gt = (A > B) ? 1 : 0;
+  assign Eq = (A == B) ? 1 : 0;
+  assign Lt = (A < B) ? 1 : 0;
+
+endmodule
