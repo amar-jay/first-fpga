@@ -29,5 +29,5 @@ to use the testbench for a specific module. copy it to the testbench file from `
 - [x] 3bit/n-bit comparator
 - [x] Multiplexer (4x1)
 - [x] 7 segment display decoder
-- [ ] left shifter
-- [ ] right shifter 
+
+      
